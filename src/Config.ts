@@ -106,6 +106,16 @@ const Config: ServerConfig = {
                 // base units are the token prior to having decimals applied to it
                 // spice has 8 decimals, so for each 1 spice there are 10^8 base units of spice
                 rate: new BigNumber(10)
+            },
+            {
+                name: "Datz",
+                symbol: "DTZ",
+                tokenId: "43d2ee803abdc3cdf89b6e7e0fc04e7b652cca014bcdb5bc9e14a2b4814241bf",
+                decimals: 7,
+                // cost per satoshi in slp base units
+                // base units are the token prior to having decimals applied to it
+                // Datz has 7 decimals, so for each 1 Datz there are 10^7 base units of DATZ
+                rate: new BigNumber(10)
             }
         ]
     },
@@ -137,6 +147,14 @@ const Config: ServerConfig = {
         // USDT / coinex.com
         {
             "tokenId": "9fc89d6b7d5be2eac0b3787c5b8236bca5de641b5bafafc8f450727b63615c11",
+            "feederClass": CoinexUSDTApiWrapper,
+            "useInitialStampRateAsMin": true
+        },
+
+        /*
+        // DATZ / datozhi.tk
+        {
+            "tokenId": "43d2ee803abdc3cdf89b6e7e0fc04e7b652cca014bcdb5bc9e14a2b4814241bf",
             "feederClass": CoinexUSDTApiWrapper,
             "useInitialStampRateAsMin": true
         }
