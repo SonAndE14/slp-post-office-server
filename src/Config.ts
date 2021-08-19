@@ -42,6 +42,13 @@ export interface SwapRateConfig {
     tokens: SwapConfig[]
 }
 
+export interface PostageRateConfig {
+    version: number,
+    address: string,
+    weight: number,
+    transactionttl: number,
+    stamps: StampConfig[]
+}
 export interface ServerConfig {
     server: {
         port: number,
@@ -140,6 +147,13 @@ const Config: ServerConfig = {
                 decimals: 2,
                 rate: new BigNumber(250)
             }
+            {
+                name: "Datz",
+                symbol: "DTZ",
+                tokenId: "43d2ee803abdc3cdf89b6e7e0fc04e7b652cca014bcdb5bc9e14a2b4814241bf",
+                decimals: 7,
+                rate: new BigNumber(250)
+            }
         ]
     },
         swapRate: {
@@ -202,6 +216,14 @@ const Config: ServerConfig = {
                 decimals: 6,
                 buy: 0.00000250,
                 sell: 0.00000450
+            }
+            {
+                name: "Datz",
+                symbol: "DTZ",
+                tokenId: "43d2ee803abdc3cdf89b6e7e0fc04e7b652cca014bcdb5bc9e14a2b4814241bf",
+                decimals: 7,
+                buy: 0.0002500,
+                sell: 0.0004500
             }
         ]
     },
